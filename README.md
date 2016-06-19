@@ -9,7 +9,8 @@ DRF7020Dx(int DRF_SET_Pin);
 After create object must set Dorji whith this method:
 int Setup(char DR_IN,long Freq_Khz,char Power_Out,char DR_FSK,char Parity,String Security_Str);
 
-DR_IN:
+#DR_IN:
+
   define DR_IN_1_2    '0'
   
   define DR_IN_2_4    '1'
@@ -24,10 +25,12 @@ DR_IN:
   
   define DR_IN_57_6   '6'
 
-Freq_Khz:
+#Freq_Khz:
+
   418000-455000 KHz -->	default 433920
 
-Power_Out:
+#Power_Out:
+
   define POUT_Min     '0'
   
   define POUT_1       '1'
@@ -49,7 +52,8 @@ Power_Out:
   define POUT_Max     '9'
   
 
-DR_FSK:
+#DR_FSK:
+
   define DR_FSK_2400  '1'
   
   define DR_FSK_4800  '2'
@@ -58,14 +62,16 @@ DR_FSK:
   
   define DR_FSK_19200 '4'
 
-Parity:  
+#Parity:  
+
   define No_Parity    '0'
   
   define Even_Parity  '1'
   
   define Odd_Parity   '2'
   
-Security_Str:
+#Security_Str:
+
   Is a header security string
 
 
