@@ -1,6 +1,6 @@
 # Dorji
 
-Can create object with En and Set pin or whit Set pin only
+Can create object with En and Set pin or with Set pin only
 
 DRF7020Dx(int DRF_EN_Pin,int DRF_SET_Pin);
 
