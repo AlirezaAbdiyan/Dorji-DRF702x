@@ -29,25 +29,40 @@ Freq_Khz:
 
 Power_Out:
   define POUT_Min     '0'
+  
   define POUT_1       '1'
+  
   define POUT_2       '2'
+  
   define POUT_3       '3'
+  
   define POUT_4       '4'
+  
   define POUT_5       '5'
+  
   define POUT_6       '6'
+  
   define POUT_7       '7'
+  
   define POUT_8       '8'
+  
   define POUT_Max     '9'
+  
 
 DR_FSK:
   define DR_FSK_2400  '1'
+  
   define DR_FSK_4800  '2'
+  
   define DR_FSK_9600  '3'
+  
   define DR_FSK_19200 '4'
 
 Parity:  
   define No_Parity    '0'
+  
   define Even_Parity  '1'
+  
   define Odd_Parity   '2'
   
 Security_Str:
