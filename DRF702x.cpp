@@ -87,16 +87,20 @@ void DRF7020Dx::Send_WireLessData(char * Data, unsigned char Data_Len)
 
 int DRF7020Dx::Check_WireLess(char * str)
 {
-	int i,len;
+	int i,len,len2=0;
 	len=Serial.available();
 	unsigned char checkSum=0;
 	if(len>0)
 	{
-		delay(100);
-		len=Serial.available();
+		while(len!=len2)  //wait to get remain data
+		{
+			len2=Serial.available();
+			delay(10);
+			len=Serial.available();
+			delay(10);
+		}		
 		Serial.readBytes(str, len);
 		Serial.flush();
-		//return len;////////
 		for(i=0;i<Security_Code_Len;i++)
 		{
 			checkSum+=str[i];
@@ -113,7 +117,7 @@ int DRF7020Dx::Check_WireLess(char * str)
 				if(i!=len-Security_Code_Len-1)	checkSum+=str[i];
 			}
 			str[i]=0;
-			if(str[i-1]!=checkSum) return 0;
+			if(str[i-1]!=((char)checkSum)) return 0;
 			str[i-1]=0;
 			return (len-Security_Code_Len-1);
 		}
